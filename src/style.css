@@ -1,0 +1,947 @@
+/* ============================================
+   CLINIC QUEUE SYSTEM - GLOBAL STYLES
+   ============================================ */
+
+/* ---------- RESET & BASE ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #0d6efd;
+    --secondary-color: #6c757d;
+    --success-color: #198754;
+    --danger-color: #dc3545;
+    --warning-color: #ffc107;
+    --info-color: #0dcaf0;
+    --dark-color: #212529;
+    --light-color: #f8f9fa;
+    --gradient-start: #667eea;
+    --gradient-end: #764ba2;
+}
+
+/* ---------- STICKY FOOTER ---------- */
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+}
+
+#app {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ---------- NAVIGATION BAR ---------- */
+.navbar {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-link {
+    transition: all 0.3s ease;
+    margin: 0 5px;
+}
+
+.nav-link:hover {
+    transform: translateY(-2px);
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+}
+
+.nav-link.active {
+    background-color: var(--primary-color);
+    border-radius: 5px;
+}
+
+/* ---------- MAIN CONTAINER ---------- */
+.container {
+    flex: 1;
+    padding: 20px;
+}
+
+/* ---------- CARDS ---------- */
+.card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    background: white;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.card-header {
+    border: none;
+    padding: 20px;
+    font-weight: bold;
+}
+
+/* ---------- BUTTONS ---------- */
+.btn {
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+    border: none;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, var(--gradient-end) 0%, var(--gradient-start) 100%);
+}
+
+/* ---------- FORM CONTROLS ---------- */
+.form-control,
+.form-select {
+    border-radius: 8px;
+    border: 2px solid #e0e0e0;
+    padding: 10px 15px;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+}
+
+.form-label {
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: var(--dark-color);
+}
+
+/* ---------- CHECKBOX STYLES ---------- */
+.form-check {
+    margin-bottom: 10px;
+}
+
+.form-check-input {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.form-check-input:checked {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+/* ---------- BADGES ---------- */
+.badge {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-weight: 500;
+}
+
+/* ---------- ALERTS ---------- */
+.alert {
+    border-radius: 10px;
+    border: none;
+    animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* ---------- TABLE STYLES ---------- */
+.table-hover tbody tr:hover {
+    background-color: rgba(13, 110, 253, 0.05);
+    cursor: pointer;
+}
+
+/* ---------- FOOTER STYLES ---------- */
+footer {
+    margin-top: auto;
+    background: white;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    overflow: hidden;
+    animation: footerFullMove 5s ease-in-out infinite;
+}
+
+@keyframes footerFullMove {
+
+    0%,
+    100% {
+        transform: translateX(0) translateY(0);
+        box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    2% {
+        transform: translateX(-3px) translateY(-2px);
+    }
+
+    4% {
+        transform: translateX(3px) translateY(0);
+    }
+
+    6% {
+        transform: translateX(-2px) translateY(2px);
+    }
+
+    8% {
+        transform: translateX(2px) translateY(0);
+    }
+
+    10% {
+        transform: translateX(0) translateY(0);
+        box-shadow: 0 -4px 15px rgba(102, 126, 234, 0.3);
+    }
+
+    15% {
+        transform: translateX(0) translateY(0);
+        box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
+    }
+}
+
+footer .container {
+    animation: containerMove 5s ease-in-out infinite;
+}
+
+@keyframes containerMove {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    5% {
+        transform: translateX(2px);
+    }
+
+    10% {
+        transform: translateX(0);
+    }
+}
+
+footer a {
+    color: #6c757d;
+    transition: all 0.3s ease;
+    padding: 8px 15px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: var(--primary-color) !important;
+    transform: translateY(-2px);
+    background-color: rgba(102, 126, 234, 0.1);
+}
+
+footer h6,
+footer p {
+    animation: textMove 5s ease-in-out infinite;
+}
+
+@keyframes textMove {
+
+    0%,
+    100% {
+        transform: translateY(0);
+        letter-spacing: normal;
+    }
+
+    5% {
+        transform: translateY(-1px);
+        letter-spacing: 0.5px;
+    }
+
+    10% {
+        transform: translateY(0);
+        letter-spacing: normal;
+    }
+}
+
+footer .border-top {
+    animation: borderMove 5s ease-in-out infinite;
+}
+
+@keyframes borderMove {
+
+    0%,
+    100% {
+        border-top-color: #e0e0e0;
+        border-top-width: 1px;
+    }
+
+    5% {
+        border-top-color: #667eea;
+        border-top-width: 2px;
+    }
+
+    10% {
+        border-top-color: #e0e0e0;
+        border-top-width: 1px;
+    }
+}
+
+footer .text-center {
+    animation: contentBounce 5s ease-in-out infinite;
+}
+
+@keyframes contentBounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    5% {
+        transform: translateY(-2px);
+    }
+
+    10% {
+        transform: translateY(0);
+    }
+}
+
+footer:hover {
+    animation-play-state: paused;
+}
+
+footer:hover a,
+footer:hover .container,
+footer:hover h6,
+footer:hover p {
+    animation-play-state: paused;
+}
+
+/* ---------- LOADING SPINNER ---------- */
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid var(--primary-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 768px) {
+    .navbar-nav {
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .nav-link {
+        display: inline-block;
+        margin: 5px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    h4 {
+        font-size: 18px;
+    }
+
+    .card-header {
+        padding: 15px;
+    }
+
+    .card-body {
+        padding: 15px;
+    }
+
+    .btn {
+        width: 100%;
+        margin: 5px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .card-header h4 {
+        font-size: 16px;
+    }
+}
+
+/* ---------- ANIMATIONS ---------- */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card {
+    animation: fadeIn 0.5s ease;
+}
+
+/* ---------- PRINT STYLES ---------- */
+@media print {
+
+    .navbar,
+    footer,
+    .btn,
+    .game-controls {
+        display: none;
+    }
+
+    .card {
+        box-shadow: none;
+        border: 1px solid #ddd;
+    }
+}
+
+/* ============================================
+   SORT OPTIONS STYLES
+   ============================================ */
+
+.sort-options-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    margin-bottom: 25px;
+    transition: all 0.3s ease;
+}
+
+.sort-options-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.sort-options-card .card-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 15px 20px;
+    font-weight: bold;
+    border: none;
+}
+
+.sort-options-card .card-header i {
+    margin-right: 10px;
+}
+
+.sort-options-card .card-body {
+    padding: 20px;
+}
+
+.sort-section h6,
+.order-section h6,
+.display-section h6,
+.quick-filters h6,
+.view-toggle h6 {
+    font-size: 13px;
+    font-weight: 600;
+    color: #666;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.sort-btn,
+.order-btn,
+.view-btn {
+    transition: all 0.3s ease;
+    font-size: 13px;
+    padding: 8px 12px;
+}
+
+.sort-btn i,
+.order-btn i,
+.view-btn i {
+    margin-right: 5px;
+}
+
+.sort-btn.active,
+.order-btn.active,
+.view-btn.active {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-color: #667eea;
+}
+
+.sort-btn:hover,
+.order-btn:hover,
+.view-btn:hover {
+    transform: translateY(-2px);
+}
+
+.quick-filter-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px;
+    background: #f0f0f0;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.quick-filter-badge i {
+    font-size: 12px;
+}
+
+.quick-filter-badge:hover {
+    background: #667eea;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.quick-filter-badge.active {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.form-select {
+    border-radius: 8px;
+    border: 2px solid #e0e0e0;
+    font-size: 13px;
+    padding: 8px 12px;
+}
+
+.form-select:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.2);
+}
+
+.sort-info {
+    background: #f8f9fa;
+    border-radius: 8px;
+    border-left: 3px solid #667eea;
+}
+
+@keyframes sortPulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.02);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.sort-btn.active,
+.order-btn.active {
+    animation: sortPulse 0.3s ease;
+}
+
+/* ============================================
+   QUEUE PAGE STYLES
+   ============================================ */
+
+.queue-hero {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 40px 0;
+    color: white;
+    text-align: center;
+}
+
+.queue-hero h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.queue-hero p {
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+.queue-table {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.queue-table thead {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.queue-table th {
+    padding: 15px;
+    font-weight: 600;
+    border: none;
+}
+
+.queue-table td {
+    padding: 12px 15px;
+    vertical-align: middle;
+}
+
+.queue-table tbody tr {
+    transition: all 0.3s ease;
+    animation: slideInLeft 0.3s ease;
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.queue-table tbody tr:hover {
+    background-color: rgba(102, 126, 234, 0.05);
+    transform: scale(1.01);
+}
+
+.queue-badge {
+    font-size: 16px;
+    padding: 8px 15px;
+    border-radius: 25px;
+    font-weight: bold;
+}
+
+/* Responsive Table */
+@media (max-width: 768px) {
+    .queue-table thead {
+        display: none;
+    }
+
+    .queue-table tbody tr {
+        display: block;
+        margin-bottom: 20px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+    }
+
+    .queue-table td {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: none;
+        border-bottom: 1px solid #eee;
+        padding: 10px;
+    }
+
+    .queue-table td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        margin-right: 10px;
+        color: var(--primary-color);
+    }
+}
+
+/* ============================================
+   PROFILE PAGE STYLES
+   ============================================ */
+
+.profile-hero {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 40px 0;
+    color: white;
+    text-align: center;
+}
+
+.profile-hero h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.profile-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    margin-bottom: 25px;
+}
+
+.profile-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 30px;
+    text-align: center;
+    color: white;
+}
+
+.profile-avatar {
+    width: 100px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+    font-size: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.profile-avatar:hover {
+    transform: scale(1.05);
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.profile-name {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.profile-id {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+.info-section {
+    padding: 20px;
+}
+
+.info-group {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 15px;
+}
+
+.info-label {
+    font-size: 12px;
+    color: #999;
+    margin-bottom: 5px;
+}
+
+.info-value {
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+}
+
+.edit-btn {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.edit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+}
+
+.form-card {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.form-card h4 {
+    color: #667eea;
+    margin-bottom: 20px;
+}
+
+.btn-save {
+    background: linear-gradient(135deg, #28a745, #20c997);
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    width: 100%;
+}
+
+.btn-cancel {
+    background: #6c757d;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    width: 100%;
+}
+
+.vital-card {
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.vital-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.vital-value {
+    font-size: 24px;
+    font-weight: bold;
+    color: #667eea;
+}
+
+@media (max-width: 768px) {
+    .profile-hero h1 {
+        font-size: 24px;
+    }
+
+    .profile-name {
+        font-size: 20px;
+    }
+}
+
+/* ============================================
+   GAME STYLES
+   ============================================ */
+
+.game-container {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    position: relative;
+}
+
+.game-stats {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.game-stats .badge {
+    font-size: 14px;
+    padding: 8px 15px;
+}
+
+.npc-canvas {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border: 2px solid #dee2e6;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.npc-avatar {
+    position: absolute;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    z-index: 2;
+}
+
+.npc-avatar:hover {
+    transform: scale(1.1);
+    z-index: 3;
+}
+
+.npc-icon {
+    font-size: 24px;
+    margin-bottom: 2px;
+}
+
+.npc-name {
+    font-size: 10px;
+    font-weight: bold;
+    color: #333;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 2px 6px;
+}
+
+.player-character {
+    position: absolute;
+    text-align: center;
+    z-index: 4;
+    transition: all 0.1s linear;
+}
+
+.player-icon {
+    font-size: 28px;
+    margin-bottom: 2px;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+}
+
+.player-name {
+    font-size: 10px;
+    font-weight: bold;
+    color: #28a745;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 2px 6px;
+}
+
+.game-controls {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+    .npc-canvas {
+        height: 300px;
+    }
+    
+    .game-controls .btn {
+        flex: 1;
+        min-width: 120px;
+    }
+}
